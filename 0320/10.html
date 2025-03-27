@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio src="medias/Kalimba.mp3" controls autoplay loop></audio>
+    <!--
+        controls : 컨트롤바 생성
+        autoplay : 자동재생
+        loop : 반복재생 loop="3" : 3번 반복
+        muted : 기본적으로 음소거 상태로 설정
+    -->
+
+    <!--브라우저에 맞는 파일을 선택해서 재생 (모두 재생 불가능 할 경우 p태그 출력)-->
+    <audio controls>
+        <source src="medias/Kalimba.mp3" type="audio/mp3">
+        <source src="medias/Kalimba.ogg" type="audio/ogg">
+        <p>이 브라우저는 audio 요소를 지원하지 않습니다.</p>
+    </audio>
+
+    <video controls poster="medias/wildlife.png"> 
+        <!--poster : 비디오 파일이 로딩되기 전에 보여줄 이미지-->
+        <!--해상도 이미지 사이트 https://placehold.co/1200x720-->
+        <source src="medias/Wildlife.mp4" type="video/mp4">
+        <source src="medias/Wildlife.webm" type="video/webm">
+        <p>이 브라우저는 video 요소를 지원하지 않습니다.</p>
+    </video>
+</body>
+</html>
