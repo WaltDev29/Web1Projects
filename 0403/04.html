@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱 웹페이지</title>
+    <style>
+        /* 후손 선택자 */
+        header h1 { 
+            color: red;
+        }
+        /* 자식 선택자 */
+        header > h1 {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML5 기본 문법</h1>
+        <div>
+            <h1>CSS3 선택자</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <h2>기본태그들</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Repellendus nostrum dolores ratione consectetur at quia, perferendis asperiores pariatur 
+                aut hic aliquid suscipit soluta, quidem autem repellat? Itaque facilis officiis molestias.
+            </p>
+        </article>
+        <article>
+            <h2>주요태그들</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus nostrum dolores ratione consectetur at quia, perferendis asperiores pariatur 
+               aut hic aliquid suscipit soluta, quidem autem repellat? Itaque facilis officiis molestias.
+           </p>
+        </article>
+    </section>
+    <footer>
+        <span>서울시 용산구 보광동 한국폴리텍대학 서울정수캠퍼스</span>
+    </footer>
+</body>
+</html>
