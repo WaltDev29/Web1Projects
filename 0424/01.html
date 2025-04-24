@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body > div {
+            width: 400px;
+            height: 100px;
+            border: 3px solid black;     
+            position: relative;              
+            overflow-y: scroll;
+        }
         .box {
             width: 100px;
             height: 100px;
@@ -14,7 +22,7 @@
             background-color: red;
             top: 10px;
             left: 10px;
-            z-index: 100;            
+            z-index: 100;
         }
         .box:nth-child(2) {
             background-color: green;
@@ -31,8 +39,13 @@
     </style>
 </head>
 <body>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
+    <h1>Lorem ipsum amet</h1>
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <h1>Lorem ipsum amet</h1>
 </body>
+
 </html>
