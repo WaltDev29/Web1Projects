@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>계절 출력</title>
+	<script>
+		let date = new Date();
+		let month = date.getMonth() +1;
+		let result = "";
+		if (month < 3 || month == 12) result = "겨울";
+		else if (month < 6) result = "봄";
+		else if (month < 9) result = "여름";
+		else if (month <= 11) result = "가을"
+		else result = "오류";
+		alert("지금은 "+result+"입니다");
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
