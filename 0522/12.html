@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		function changeStyle() {
+			let t1 = document.getElementById("t1");
+			t1.style.color = "red";
+			t1.style.backgroundColor = "pink";
+			t1.innerHTML = "Changed Text";
+		}
+
+		function resetStyle() {
+			t1.style.color = "unset";
+			t1.style.backgroundColor = "unset";
+			t1.innerHTML = "Original Text";
+		}
+	</script>
+</head>
+<body onload="">
+	<h1 id="t1">Original Text</h1>
+	<button id="btn_change" onclick="changeStyle()">스타일 변경</button>
+	<button id="btn_reset" onclick="resetStyle()">스타일 초기화</button>
+	<script>
+		let btn_change = document.getElementById("btn_change");
+		let btn_reset = document.getElementById("btn_reset");
+	</script>
+</body>
+</html>
