@@ -22,15 +22,18 @@
 		}
 
 		function reset() {
-			img.width = 400;
-			img.src = "imgs/hero_running.gif";
+			img.width = 400;			
+		}
+		function cheers() {
+			document.body.setAttribute("data-cheers", "I like beeeeeer");
+			alert(document.body.getAttribute("data-cheers"));
 		}
 	</script>
 </head>
 
 <body>
-	<img src="imgs/hero_running.gif">
-	<button onclick="changeImg()">Change</button>
+	<img src="imgs/hero_running.gif">	
+	<button onclick="cheers()">Cheers</button>
 	<button onclick="resize()">Click</button>
 	<button onclick="reset()">Reset</button>
 	<select onchange="changeImg(this)">
