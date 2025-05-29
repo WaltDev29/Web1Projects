@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gradient Button</title>
+	<style>
+		input {
+			font-size: 20px;
+			border-radius: 5px;
+			border: 2px solid orange;
+			background-color: lightcoral;
+			color: white;
+		}
+		div#container{
+			width: 512px;
+			height: 512px;
+			border: 2px solid orange;		
+		}
+	</style>
+</head>
+<body>
+	<input type="button" id="gradient" value="Gradient" onclick="gradient()">
+	<input type="button" id="reset" value="Reset" onclick="reset()">
+	<div id="container"></div>
+	<script>
+		let btn_gra = document.querySelector("#gradient");
+		let btn_re = document.querySelector("#reset");
+		let cont = document.querySelector("#container");
+
+		function gradient() {
+			let output = "";
+			for (let i=0; i<256; i++) {
+				output += "<div></div>";
+			}
+			cont.innerHTML = output;
+	
+			let divs = document.querySelectorAll("div:not(#container)");
+			let i = 0;
+			for (let div of divs) {
+				div.style.height = "2px";
+				div.style.background = `rgb(255, ${i}, ${i})`;
+				i++;
+			}
+		}
+		function reset() {
+			cont.innerHTML = "";
+		}
+	</script>
+</body>
+</html>
