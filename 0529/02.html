@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>스타일 속성 접근</title>
+	<script>
+		function gradient() {			
+			let output = '';
+			for (let i=0; i<256; i++) {
+				output += '<div></div>';
+			}
+			document.body.innerHTML = output;
+			let divs = document.querySelectorAll("div");			
+			let i = 0;
+			for (let div of divs) {
+				div.style.height = "2px";
+				div.style.background = `rgb(${i},${i},${i})`;
+				i++;				
+			}
+		}
+	</script>
+</head>
+<body onload="gradient()">
+	
+</body>
+</html>
