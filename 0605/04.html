@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(
+			function () {
+				let src = $("script").attr("src");
+				alert("현재 스크립트 파일의 경로 : " + src);
+				$("h1").css("color", "red");
+				$("h1").css("backgroundColor", "black");
+			}
+		);
+	</script>
+</head>
+
+<body>
+	<h1>jQuery1</h1>
+	<h1>jQuery2</h1>
+	<h1>jQuery3</h1>	
+</body>
+
+</html>
