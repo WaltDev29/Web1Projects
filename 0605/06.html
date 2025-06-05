@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery attr</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(
+			function() {
+				$("img").attr({
+					"alt" : "placehold.co",										
+					"src" : function(index) {
+						// index = attr 메서드가 가지고 있는 매개변수 (요소들의 순서)
+						let size = (index + 1) * 100;
+						return "https://placehold.co/"+ size +"x100"
+					}
+				});
+			}
+		)
+	</script>
+</head>
+<body>
+	<img src="">
+	<img src="">
+	<img src="">
+</body>
+</html>
