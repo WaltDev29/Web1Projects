@@ -9,16 +9,19 @@
 	<h1>onclick, onmouseover, onmouseout</h1>
 	<button onclick="btn_clicked()">Click Here!</button>	
 	<br>
-	<img src="../0529/imgs/walking_duck.gif" onmouseover="change(this)" onmouseout="reset(this)">
+	<img src="../0529/imgs/walking_duck.gif" onmouseover="change(this)" onmouseout="this.src='../0529/imgs/walking_duck.gif'">	
 	<script>
+		let img = document.querySelector("img");
 		function btn_clicked() {
 			alert("버튼이 클릭되었습니다.");
 		}
 		function change(self) {
 			self.src = "../0529/imgs/hero_running.gif";
 		}
-		function reset(self) {
-			self.src = "../0529/imgs/walking_duck.gif";
+		img.addEventListener("click", resize);
+		function resize() {
+			let size = (Math.random() * 100) + 300;
+			img.width = size;
 		}
 	</script>
 </body>
