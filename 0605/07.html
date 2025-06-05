@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery attr</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(
+			function () {
+				// css는 속성을 따움표로 감싸지 않음
+				$(".box").css({
+					float : "left",
+					margin : "10px",
+					width : "300px",
+					height : "300px",
+					border : "2px solid blue",
+					backgroundColor : "red"
+				})
+			}
+		)
+	</script>
+</head>
+
+<body>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+</body>
+
+</html>
