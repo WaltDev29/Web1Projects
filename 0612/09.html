@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>시각 효과</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#btn_toggle").click(function(event) {
+				$("#container").fadeToggle("slow");
+			});
+			$("#btn_in").click(function() {
+				$("#container").fadeIn("slow");
+			})
+			$("#btn_out").click(function() {
+				$("#container").fadeOut("slow");
+			})
+		})
+	</script>
+</head>
+<body>
+	<button id="btn_in">Fade In</button>
+	<button id="btn_out">Fade Out</button>
+	<button id="btn_toggle">Fade Togggle</button>
+	<br>
+	<div id="container">
+		<h2>Lorem, ipsum dolor.</h2>
+		<p id="content1">Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
+		<p id="content2">Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
+	</div>
+</body>
+</html>
