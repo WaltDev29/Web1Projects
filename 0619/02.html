@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Frame Animation</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			let count = 0;
+			// let img = document.querySelector("#image"); 자바스크립트 문법
+			let img = $("#image"); // jQuery 문법 (jQuery 객체가 됨)
+			let frames = [
+				'0.png','1.png','2.png','3.png','4.png',
+				'5.png','6.png','7.png','8.png','9.png',
+				'10.png','11.png','12.png','13.png','14.png'
+			];
+			setInterval(function() {
+				// img.src = "images/" + frames[count % frames.length]; 자바스크립트 문법 jQuery 객체에는 적용이 안됨
+				img.attr("src", ("images/" + frames[count % frames.length]))
+				count++;
+			}, 1000/20); // 초당 20프레임의 의미를 표현
+
+			setInter
+		})
+	</script>
+</head>
+<body>
+	<img id="image">
+</body>
+</html>
