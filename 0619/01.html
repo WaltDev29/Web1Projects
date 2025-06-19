@@ -7,6 +7,7 @@
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script>
 		$(document).ready(function() {
+			// 배열을 반환하므로 인덱스로 접근 가능ㄴ
 			let input_1 = $("input")[0];
 			let input_2 = $("input")[1];
 
@@ -14,7 +15,10 @@
 				if (input_1.value.length >= 6) input_2.focus();
 			};
 			input_2.onkeydown = function(event) {
+				// event가 없으면 (ex: IE에서 함수 인자로 안 주는 경우) → window.event 사용
 				event = event || window.event;
+				// 8 = "백스페이스" 키코드
+				// event.key === 'Backspace' 이것도 가능 (가독성굿)
 				if (event.keyCode == 8 && input_2.value.length == 0) input_1.focus();
 			};
 		})
